@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+     <!-- For sign cart -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="card_cart.css">
+</head>
+<body>
+    <div class="background"></div> <!-- ---------REMEMBER - THIS IS THE BACKGROUND---------  -->
+    <section class="OrderSection" >
+
+        <div class="Order-container">
+
+            <div class="ship-mtd">
+                <h2>Choose payment method</h2>
+                <div class="ship-opt">
+                    <button>Delivery</button>
+                    <button>PickUp</button>
+                </div>
+            </div>
+            <form action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post">
+                <div class="row">
+
+                    <div class="column">
+
+                        <div class="deli-box" id="deliveryBox" >
+                                <h3 class="title">Delivery Address</h3>
+                                <input type="text" class="delivery-text"  name="Delivery Address" required>
+                        </div>
+                        <h3 class="title">Billing Address</h3>
+                        <div class="input-box">
+                            <input type="text" class="bill-input" name="Billing Address" required >
+                        </div>
+                        <div class="sameAsDe-box">
+                            <input type="checkbox" id="sameAsDelivery">
+                            <label for="sameAsDelivery"> Same as delivery address</label>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="fName">Full Name :</label>
+                            <input id="fName" type="text" name="Full Name" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="mail">Email for receipt :</label>
+                            <input id="mail" type="email" name="Email" required >
+                        </div>
+                        <div class="input-box">
+                            <label for="contNum">Contact Number :</label>
+                            <input id="contNum" type="text" name="Contact Number" required>
+                        </div>
+
+                    </div>
+
+                    <div class="column Order">
+
+                        <h3 class="title">Payment</h3>      
+                        <div class="payment-type">
+                            <input  type="radio" id="Pickup" name="orderType" value="Pay on pickup" checked> 
+                            <label class="pay-opt" for="Pickup">Pay on pickup</label>         
+                            <input  type="radio" id="Online" name="orderType" value="Online" > 
+                            <label class="pay-opt" for="Online">Online</label>
+                        </div>
+                        <button class="comeback">Back to payment method</button>   
+                        <div class="input-box card-accept">
+                            <label>Cards Accepted :</label>
+                            <img class="cardImage" src="../../images/credit_img/credit.png"  alt="card image">
+                        </div>
+                        <div class="input-box credit-type">
+                            <label for="cardType" >Credit Card Type :</label>
+                            <select id="cardType"  name="Credit Card">
+                                <option value="Visa">Visa</option>
+                                <option value="MasterCard">MasterCard</option>
+                                <option value="American Express">American Express</option>
+                            </select>
+                        </div>
+                        <div class="input-box card-name">
+                            <label for="cardName">Name on Card :</label>
+                            <input id="cardName" type="text" name="Card name">
+                        </div>
+                        <div class="input-box card-num">
+                            <label for="cardNum">Credit Card number :</label>
+                            <input id="cardNum" type="text" name="Credit Card number">
+                        </div>
+                        <div class="input-box card-exp">
+                            <label for="cardExp">Exp. Month :</label>
+                            <input id="cardExp" type="text" name="Exp. Month">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+
+        <div class="cart-container">
+
+            <div class="sidebar">
+                <h3 class="head">My Cart </h3>
+                <div id="cartItem">Your cart is empty</div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">$ 0.00</h2>
+                </div>
+            </div>
+    
+        </div> 
+
+        
+    </section>
+
+    <script src="payment.js"></script>
+    <script src="card_cart.js" ></script>
+    <script>
+        window.onload = function() {
+            displaycart();
+        };
+    </script>
+</body>
+</html>

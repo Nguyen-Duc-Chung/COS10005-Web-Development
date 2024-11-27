@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sweet Life - Indulge in our artisanal ice creams and desserts made with the finest ingredients. Visit us in Milan or order online to experience our signature flavors.">
+    <meta name="keywords" content="Sweet Life, ice cream, artisanal desserts, Milan, signature flavors, order online">
+    <meta name="author" content="Nguyen Duc Chung">
+    <title>Order</title>
+    <!-- Font Awesome for icons in the cart and footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Linking CSS files for navigation, order page, and cart -->
+    <link rel="stylesheet" href="../../css/nav_footer.css">
+    <link rel="stylesheet" href="../../css/order.css">
+    <link rel="stylesheet" href="../../css/card_cart.css">
+    <!--  Take style for skip link in features.css   -->
+    <link rel="stylesheet" href="../../css/features.css">
+</head>
+<body>
+    <header>  <!-- Header section with navigation bar -->
+        <div class="navbar">
+            <div class="logo">
+                <h1>Sweet Life</h1>
+            </div>
+            <ul class="links">  <!-- Navigation links -->
+                <li><a class="nav-opt" href="index.html">Home</a></li>
+                <li><a class="nav-opt" href="order.html">Order</a></li>
+                <li><a class="nav-opt" href="registration.html">Sign Up</a></li>
+                <li><a class="nav-opt" href="features.html">Features</a></li>
+            </ul>
+            <div class="toggle_btn">  <!-- Toggle button for mobile navigation -->
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        
+        <div class="dropdown_menu "> <!-- Dropdown menu for mobile view -->
+            <ul class="dropdown_ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="registration.html">Sign Up</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="background"></div> <!--  BACKGROUND   -->
+    <a href="index.html" class="skip-link">Back to Main page</a>
+    
+    <main>
+        <section class="OrderSection" > <!-- Order section where users select payment and input information -->
+            
+            <div class="Order-container">
+                
+                <div class="ship-mtd"> <!-- Section for selecting shipping and payment method -->
+                    <h2>Choose payment method</h2>
+                    <div class="ship-opt">
+                        <button>Delivery</button>
+                        <button>PickUp</button>
+                    </div>
+                </div>
+                <form action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post"> <!-- Order form for collecting customer details -->
+                    <div class="row">
+                        
+                        <!-- Left column with delivery and billing information -->
+                        <div class="column">
+                            
+                            <div class="deli-box" id="deliveryBox" >
+                                <h3 class="title"><label for="delivery-text">Delivery Address</label></h3>
+                                <input type="text" id="delivery-text" class="delivery-text"  name="Delivery Address" required>
+                            </div>
+                            <h3 class="title"><label for="bill-input">Billing Address</label></h3>
+                            <div class="input-box">
+                                <input type="text" id="bill-input" class="bill-input" name="Billing Address" required >
+                            </div>
+                            <div class="sameAsDe-box"> <!-- Checkbox for same address as delivery -->
+                                <input type="checkbox" id="sameAsDelivery">
+                                <label for="sameAsDelivery"> Same as delivery address</label>
+                            </div>
+                            
+                            <!-- ///////////// Customer's contact information fields ///////////// -->
+                            <div class="input-box">
+                                <label for="fName">Full Name :</label>
+                                <input id="fName" type="text" name="Full Name" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="mail">Email for receipt :</label>
+                                <input id="mail" type="email" name="Email" required >
+                            </div>
+                            <div class="input-box">
+                                <label for="contNum">Contact Number :</label>
+                                <input id="contNum" type="text" name="Contact Number" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="postcode">Postcode:</label>
+                                <input id="postcode" type="text" name="Postcode" required>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="column Order">
+                            
+                            <!-- Right column with payment options and card details -->
+                            <h3 class="title">Payment</h3>      
+                            <fieldset  class="payment-type"><!-- Payment option selection -->
+                                <legend>Option</legend>
+                                <input  type="radio" id="Pickup" name="orderType" value="Pay on pickup" checked> 
+                                <label class="pay-opt" for="Pickup">Pay on pickup</label>         
+                                <input  type="radio" id="Online" name="orderType" value="Online" > 
+                                <label class="pay-opt" for="Online">Online</label>
+                            </fieldset >
+                            <button class="comeback">Back to payment method</button>   
+                            
+                            <!-- Card details for online payment -->
+                            <div class="input-box card-accept">
+                                <label for="card-accept-input">Cards Accepted :</label>
+                                <input id="card-accept-input">
+                                <img class="cardImage" src="../../images/credit_img/credit.png"  alt="credit_card_img">
+                            </div>
+                            <div class="input-box credit-type">
+                                <label for="cardType" >Credit Card Type :</label>
+                                <select id="cardType"  name="Credit Card">
+                                    <option value="Visa">Visa</option>
+                                    <option value="MasterCard">MasterCard</option>
+                                    <option value="American Express">American Express</option>
+                                </select>
+                            </div>
+                            <div class="input-box card-name">
+                                <label for="cardName">Name on Card :</label>
+                                <input id="cardName" type="text" name="Card name">
+                            </div>
+                            <div class="input-box card-num">
+                                <label for="cardNum">Credit Card number :</label>
+                                <input id="cardNum" type="text" name="Credit Card number">
+                            </div>
+                            <div class="input-box card-exp">
+                                <label for="cardExp">Exp. Month :</label>
+                                <input id="cardExp" type="text" name="Exp. Month">
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <button type="submit" class="btn">Submit</button> <!-- Submit button for the form -->
+                </form>
+            </div>
+            
+            <div class="cart-container"> <!-- Sidebar displaying ice cream pushed to cart -->
+                
+                <div class="sidebar">
+                    <h3 class="head">My Cart </h3>
+                    <div id="cartItem">Your cart is empty</div>
+                    <div class="foot">
+                        <h3>Total</h3>
+                        <h2 id="total">$ 0.00</h2>
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+        </section>
+    </main>
+    
+    <!-- Footer with social icons and navigation links -->
+    <footer class="footerContainer" id="page1">
+        <div class="socialIcons">
+            <a  href=""><i class="fa-brands fa-facebook"><span>facebook</span></i></a>
+            <a href=""><i class="fa-brands fa-instagram"><span>insta</span></i></a>
+            <a href=""><i class="fa-brands fa-youtube"><span>youtube</span></i></a>     
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">About</a></li>       
+            </ul>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2023; Designed by <span class="designer">Nguyen Duc Chung</span></p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript files for navigation and slider functionality -->
+    <script src="../../js/navbar.js"></script>
+    <script src="../../js/payment.js"></script>
+    <script src="../../js/card_cart.js" ></script>
+    <script>
+        window.onload = function() {
+            displaycart();
+        };
+    </script>
+</body>
+</html>

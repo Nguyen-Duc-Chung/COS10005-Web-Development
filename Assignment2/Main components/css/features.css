@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+    min-height: 100vh; background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-image: url("../images/background/creambg.jpg");
+    background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed;
+  }
+  .background{ /* Transparent background overlay */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; min-height: 100vh;
+    background: rgba(30, 30, 30, 0.2) ;
+    backdrop-filter: blur(15px);
+    z-index: -1;   /* Send behind other elements */
+  
+  }
+
+  /********************************************* Skip Link  ******************************************************************/
+.skip-link {
+    position: fixed;
+    border-radius: 50px;
+    background: #e5594c ;
+    margin-left: 10px;
+    color: #000000;
+    padding: 10px;
+    margin-top: -5rem;
+    z-index: 1000;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.skip-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+    .skip-link {
+        top: 120px; 
+        padding: 8px 16px;
+        font-size: 0.9rem; 
+    }  
+}
+
+  /* Styling for Features Main Content */
+.animation-main {
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.animation-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #FCEDD8;
+    background-color: rgba(0,0,0, 0.5);
+    margin-bottom: 20px;
+}
+
+.animation-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.animation-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.animation-heading {
+    font-size: 1.8em;
+    color: #174b3f;
+    margin-bottom: 10px;
+}
+
+.animation-description {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.animation-link {
+    display: inline-block;
+    color: #174b3f;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #174b3f;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.animation-link:hover {
+    background-color: #174b3f;
+    color: #fff;
+}
+

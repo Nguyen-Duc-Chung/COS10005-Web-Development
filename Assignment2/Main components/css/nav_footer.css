@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Font size for Logo and h1 Intro in Nav bar*/
+@import url('https://fonts.googleapis.com/css2?family=Niconne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Font size for List and description intro in Nav bar*/
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Niconne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* * {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh; 
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-image: url("creambbg.jpg");
+    background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed;
+}
+.background{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; min-height: 100vh;
+    background: rgba(255, 255, 255, 0.1) ;
+    backdrop-filter: blur(15px);
+    z-index: -1;
+} */
+
+
+
+/*************************************** NAVIGATION*************************************************/
+li{
+    list-style: none;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    padding: 0 2rem;
+    margin-bottom: 9rem;
+}
+
+.navbar { /* Navbar container */
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar links container styling */
+.links{
+    /* border: 2px solid #EFA032;
+    background-color: #C11A2B ; */
+    border-radius: 50px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a {
+    margin: 20px;
+    text-decoration: none;
+    color: #22dede;
+    font-size: 1.9rem;
+    font-weight: 450;
+    transition: all .5s ease;
+    font-family: "Itim", cursive;
+}
+
+.links a:hover {
+    text-shadow: 0 0 10px #e6d1b4 ;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+
+.links a.active { /* Active link style in the navbar */
+    text-shadow: 0 0 10px #e6d1b4 ;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+
+.navbar .logo h1 { /* Styling for the logo in the navbar */
+    display: block;
+    font-size:4rem;
+    text-align: center;
+    color: #FCEDD8;
+    font-family: "Niconne", cursive;
+    font-weight: 700;
+    text-shadow:
+     2px 2px #EB452B,4px 4px #EFA032,6px 6px #052939, 8px 8px #22dede ;         
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn { /* Toggle button for mobile menu */
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+/* Dropdown menu */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;  /* Positioned 2rem from the right edge of the container */
+    top: 60px;
+    height:0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1) ;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth height transition using a cubic-bezier curve */
+}
+
+.dropdown_menu.open { /* Expanded dropdown menu when open */
+    height: 220px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Responsive design*/
+@media (max-width: 992px) {
+    .navbar .links 
+    {
+        display: none; /* Hides navbar links in smaller screens */
+    }
+
+    .navbar .toggle_btn {
+        display: block; /* Shows the toggle button for mobile navigation */
+    }
+
+    .dropdown_menu {
+        display: block; /* Displays the dropdown menu in mobile view */
+    } 
+
+    a {
+        text-decoration: none;
+        color: #e59313;
+        font-size: 1.4rem;
+        font-weight: 400;
+        transition: all .5s ease; /* Smooth transition for link styles */
+    }
+    a:hover {
+        font-size: 1.8rem;
+    }
+}
+
+/*************************************** FOOTER*************************************************/
+
+footer.footerContainer { /* Footer container styling */
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px 0 0 0;
+    width: 100%;
+    bottom: 0;
+}
+
+.socialIcons{ /* Social media icons container styling */
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a{
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #ffffff; /* White background for each icon */
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.socialIcons a i span {
+    margin-left: 5px; /* Adds space to the left of the text */
+}
+
+.footerNav{
+    margin: 18px 0; 
+}
+.footerNav ul{
+    display: flex;  /* Flex layout for horizontal alignment */
+    justify-content: center; 
+    list-style-type: none;
+}
+.footerNav ul li a {
+    color:white;
+    margin: 20px;
+    font-size: 1.3em;
+    transition: 0.5s; /* Smooth transition effect for link styling changes */
+}
+.footerBottom {
+    background-color: #000;
+    padding: 20px ;
+    text-align: center;  /* Centers text within the footer */
+    color: white;
+}
+.designer{
+    opacity: 0.7; /* Reduces opacity for subtle effect */
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media (max-width: 700px){
+
+    .socialIcons {  /* Social icons are displayed in a vertical column */
+        display: flex;
+        flex-direction: column;
+        align-items:center ;
+    }
+    .socialIcons a   {
+        width: 35%; /* Sets icon width to 35% of the container */
+        font-size: 17px;
+    }
+
+    .socialIcons a i  {  /* Footer navigation list layout in a vertical column */
+        width: 100%;
+        text-align: center;
+    }
+
+    .footerNav ul{
+        flex-direction: column;
+        align-items:center ;
+    } 
+    .footerNav ul li{ /* Footer navigation list items styling for mobile view */
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+
+/****************************************************/

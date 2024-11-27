@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Font size for Logo and h1 Intro in Nav bar*/
+@import url('https://fonts.googleapis.com/css2?family=Niconne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Font size for List and description intro in Nav bar*/
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Niconne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh; background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-image: url("creambbg.jpg");
+    background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed;
+}
+.background{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; min-height: 100vh;
+    background: rgba(0, 0, 0, 0.1) ;
+    backdrop-filter: blur(15px);
+    z-index: -1;
+}
+
+
+
+/*************************************** NAVIGATION*************************************************/
+li{
+    list-style: none;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links{
+    /* border: 2px solid #EFA032;
+    background-color: #C11A2B ; */
+    border-radius: 50px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a {
+    margin: 20px;
+    text-decoration: none;
+    color: #d98908;
+    font-size: 1.7rem;
+    font-weight: 450;
+    transition: all .5s ease;
+    font-family: "Itim", cursive;
+}
+
+.links a:hover {
+    text-shadow: 0 0 10px #e6d1b4 ;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.links a.active {
+    text-shadow: 0 0 10px #e6d1b4 ;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.navbar .logo h2 {
+    display: block;
+    font-size:4rem;
+    text-align: center;
+    color: #FCEDD8;
+    font-family: "Niconne", cursive;
+    font-weight: 700;
+    text-shadow:
+     2px 2px #EB452B,4px 4px #EFA032,6px 6px #052939, 8px 8px #22dede ;         
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+/* Dropdown menu */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height:0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1) ;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 220px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Responsive design*/
+@media (max-width: 992px) {
+    .navbar .links 
+    {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+    a {
+        text-decoration: none;
+        color: #e59313;
+        font-size: 1.4rem;
+        font-weight: 400;
+        transition: all .5s ease;
+    }
+    a:hover {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+/*********************************** Footer ************************************/
+
+footer {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px 0 0 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a{
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.socialIcons a li{
+    opacity: 0.9;
+    font-size:  2em;
+    color: black;
+}
+.footerNav{
+    margin: 18px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a {
+    color:white;
+    margin: 20px;
+    font-size: 1.3em;
+    transition: 0.5s;
+}
+.footerBottom {
+    background-color: #000;
+    padding: 20px ;
+    text-align: center;
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+
+/****************************************************/

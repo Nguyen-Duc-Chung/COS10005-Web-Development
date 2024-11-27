@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*************************************** HISTORY And LOCATION *************************************************/
+
+.history_location{ /* Container for history and location sections with central alignment */
+    position: relative;
+    margin: 20px auto;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.skewed {
+    color: #fff;
+    width: 70rem;
+    display: flex;
+    background: #552e0f;  
+    margin: 2rem 0 5rem 0  ; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Text container styling inside skewed sections */
+.text_his_lo {
+    padding: 1.5em;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+/* Image container styling with fixed height and overflow hidden */
+.image_his_lo{
+    width: 60%;
+    height: 21em;
+    position: relative;
+    overflow: hidden;
+}
+
+.image_his_lo::before {
+    content: '';
+    position: absolute;
+    left: -11rem;
+    top: 50%;
+    /* Centers the element vertically by moving it up 50% of its height and applies a 20-degree rotation for a skewed effect */
+    transform: translateY(-50%) rotate(20deg); 
+    background: #552e0f;
+    width: 40%;
+    height: 140%;
+    box-shadow: 0 0 25px rgba(70, 65, 65, 0.7);
+}
+
+/* Adjusts the skew effect for left-aligned skewed sections */
+.skewed-left .image_his_lo::before {
+    transform: translateY(-50%) rotate(-20deg); /* Centers the element vertically ny moving up
+                                                   50% of its height and applies a -20-degree rotation */
+    left: initial;
+    right: -11rem;
+}
+
+.image_his_lo div img{
+    width: 100%;
+}
+
+@keyframes appear {
+    from {
+      opacity: 0;
+      clip-path: inset(100% 100% 0 0);  /* Initially clips the element to hide it */
+    }
+    to {
+      opacity: 1;
+      clip-path: inset(0 0 0 0); /* Fully reveals the element by removing clipping */
+    }
+  }
+
+  .skewed {
+    animation: appear linear;
+    animation-timeline: view(); /* start animation when in viewport */
+    animation-range: entry 0% cover 20%; /* Begins animation as element enters the viewport and covers 20% of the element’s view */
+  }
+
+@media screen and (max-width: 750px) {
+    .skewed {
+        display: block ;
+        width: 20em;
+    }
+    .image_his_lo, .text_his_lo {
+        width: 100%;
+    }
+    .image_his_lo div img {
+        width: 160%;
+    }
+    /* Modify skew effect dimensions and positioning for smaller screens */
+    .skewed .image_his_lo::before { 
+        width: 120%;
+        height: 40%;
+        top: -5em;
+        left: 50%;
+        transform: translateX(-50%) rotate(-10deg);
+    }
+     /* Adjust position and rotation of skew effect for left-aligned skewed sections */
+    .skewed-left .image_his_lo::before {  
+        transform: translateX(-50%) rotate(-10deg);
+        top: initial;
+        bottom: -5em;
+    }
+}
+/*************************************** END *************************************************/
+
+

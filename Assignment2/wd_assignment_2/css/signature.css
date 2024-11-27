@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* * {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh; background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-image: url("creambbg.jpg");
+    background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed;
+}
+.background{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; min-height: 100vh;
+    background: rgba(0, 0, 0, 0.1) ;
+    backdrop-filter: blur(15px);
+    z-index: -1;
+} */
+
+/*************************************** SIGNATURE*************************************************/
+
+/* //////////////////sigSlider section//////////////////  */
+.sigSlider{
+    height: 90vh;
+    margin: 5rem auto;
+    width: 90%;
+    overflow: hidden;
+    position: relative;
+}
+.sigSlider .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0; /* positions item in all directions (top, right, bottom, left) at 0 */
+}
+
+/* Ensures each image fills the item container entirely without distortion */
+.sigSlider .list .item img{  
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ /* Content container positioned within each slide, centered horizontally with padding on the right */
+.sigSlider .list .item .content{    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%; 
+    transform: translateX(-50%); 
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004; /* adds a shadow effect to make text more readable */
+}
+
+.sigSlider .list .item .content .title{
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: rgba(0,0,0, 0.5);
+}
+.sigSlider .list .item .content .type{
+    font-size: 4rem;
+    font-weight: 800;
+    color: #dc9249;
+    background-color: rgba(0,0,0, 0.5);
+}
+.sigSlider .list .item .content .description{
+    background-color: rgba(0,0,0, 0.5);
+    font-size: 1.2rem ;
+}
+
+/*arranged in a grid layout with two columns */
+.sigSlider .list .item .button{
+    display: grid;
+    grid-template-columns: repeat(2, 130px); /* two columns, each 130px wide */
+    grid-template-rows: 40px; /* sets the row height to 40px */
+    gap: 5px; /* space between buttons */
+    margin-top: 20px;
+}
+.sigSlider .list .item .button button{
+    border: none;
+    background-color: #eee;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.4s; /* smooth transition effect for hover */
+    letter-spacing: 2px;
+}
+
+
+.sigSlider .list .item .button button:hover{
+    letter-spacing: 3px;
+}
+.sigSlider .list .item .button button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+
+
+/* ////////////////// Thumbnail Section //////////////////  */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content; /* container width adapts to its content */
+    z-index: 100; /* ensures the thumbnails appear above other elements */
+    display: flex;
+    gap: 20px;
+}
+
+
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0; /* prevents item from shrinking in flex container */
+    position: relative;
+}
+
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    border-radius: 20px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ////////////////// nextPrevArrows Section //////////////////  */
+.nextPrevArrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px; /* sets container width */
+    max-width: 30%; /* ensures container does not exceed 30% of the screen width */
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+/* Styling for each arrow button within the container */
+.nextPrevArrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* makes the button circular */
+    background-color: #fff;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    transition: .5s;  /* smooth transition for hover effects */
+    cursor: pointer; 
+}
+.nextPrevArrows button:hover{
+    background-color: #ee4540;
+    color: #fff;
+}
+
+/* Animation Part */
+.sigSlider .list .item:nth-child(1){
+    z-index: 1;
+}
+
+
+/* ////////////////// animation text in first item //////////////////  */
+
+/* Initial animation setup for the title, type, description, and buttons in the first slider item */
+.sigSlider .list .item:nth-child(1) .content .title,
+.sigSlider .list .item:nth-child(1) .content .type,
+.sigSlider .list .item:nth-child(1) .content .description,
+.sigSlider .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px); /* moves element 50px down */
+    filter: blur(20px);    /* applies a blur effect */
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+
+/*  brings element into view by resetting transform, filter, and opacity */
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.sigSlider .list .item:nth-child(1) .content .title{
+    animation-delay: 0.4s !important; /* title appears after 0.4 seconds */
+}
+.sigSlider .list .item:nth-child(1) .content .type{
+    animation-delay: 0.6s !important;
+}
+.sigSlider .list .item:nth-child(1) .content .description{
+    animation-delay: 0.8s !important;
+}
+.sigSlider .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1s !important;    /* buttons appear after 1 second */
+}
+
+
+/* Animation for next button click */
+.sigSlider.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards; /* triggers showImage animation */
+}
+
+@keyframes showImage{
+    to{
+        bottom: 0; /* aligns the image to the bottom */
+        left: 0;   /* aligns the image to the left */
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.sigSlider.next .thumbnail .item:nth-last-child(1){ /* Animation for the last thumbnail in the next slider */
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards; /* triggers showThumbnail animation */
+}
+.sigSlider.prev .list .item img{ 
+    z-index: 100; /* Z-index for images when in prev state to ensure visibility */
+}
+
+@keyframes showThumbnail{ /*reveal thumbnail gradually */
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+.sigSlider.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards; /* Animation for the thumbnail container when in the next state */
+}
+
+@keyframes effectNext{ /* Effect entering from the right */
+    from{
+        transform: translateX(150px); /* moves the container 150px to the right initially */
+    }
+}
+
+/* Animation for prev button click */
+.sigSlider.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.sigSlider.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.sigSlider.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.sigSlider.next .nextPrevArrows button,
+.sigSlider.prev .nextPrevArrows button{
+    pointer-events: none;
+}
+
+/* Animation for content in the second item in prev slider moving upwards and fading out */
+.sigSlider.prev .list .item:nth-child(2) .content .title,
+.sigSlider.prev .list .item:nth-child(2) .content .type,
+.sigSlider.prev .list .item:nth-child(2) .content .description,
+.sigSlider.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important; /* Use !important to override ALL previous styling rules*/
+}
+
+@keyframes contentOut{ /* Keyframes for moving content out of view with fade and blur effect */
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) { /* Responsive adjustments for screens smaller than 678px */
+    .sigSlider .list .item .content{
+        padding-right: 0; /* removes padding for smaller screens */
+    }
+    .sigSlider .list .item .content .title{
+        font-size: 25px; /* reduces title font size */
+    }
+    .sigSlider .list .item .content .type{
+        font-size: 2rem; 
+    }
+    .sigSlider .list .item .content .description{
+        font-size: 1rem; 
+    }
+}

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color:antiquewhite;
+}
+
+/*************************************** MENU *************************************************/
+.menu {
+    margin: 20px auto;
+    border: 1px solid black;
+    width: 80%; /* Sets the menu width to 80% of the container */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines if necessary */
+}
+
+.cardIce {
+    width: min-content; /* Sets the card width to fit its content */
+    padding: 11px;
+    margin:  20px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); /* Smooth transition for hover effects over 0.4 seconds */
+    transition: .4s ease;
+}
+
+.cardIce:hover {
+    transform: scale(1.05);
+}
+
+.cardIce .card-image {
+    position: relative;  /* Positions elements inside based on this container */
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    background: #4d90a6;
+    border-radius: 12px;
+    overflow: hidden; /* Hides any overflow from child elements */
+}
+
+.cardIce .card-image img {
+    width: 100%;
+    height: 100%;
+    transition: .4s ease; /* Smooth transition for image transformations */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+} 
+
+.cardIce:hover .card-image img {
+    transform: scale(1.02) rotate(-3deg) translateX(-5px); /* Slightly scales, rotates, and shifts the image on hover */
+}
+
+.cardIce .card-image .fa-star {
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    position: absolute; 
+    top: 12px; /* Positions the icon 12px from the top */
+    right: 12px;
+    padding: 10px;
+    font-size: 20px;
+    color: #f7ae04;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); /* Adds a shadow around the icon */
+}
+
+.cardIce .card-content h3 {
+    color: #222;
+    font-size: 15px;
+    margin-top: 10px;  /* Adds a top margin to separate it from the image */
+}
+
+.cardIce .card-content p.describe {
+    color: #555;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 5px 0 10px;
+    text-align: justify; /* Justifies the text for neat alignment */
+}
+
+.cardIce .card-content p.cardPrice {
+    text-align: center;
+    font-size: 30px ;
+}
+
+.cardIce .card-content button {
+    cursor: pointer;  
+    color: #fff;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 600; /* Sets a bold font weight for the button text */
+    border-radius: 12px;
+    background: linear-gradient(45deg, #fabd14, #eb9616); /* Applies a gradient background to the button */
+    border: none;
+}
+
+@media (max-width: 550px){
+    .menu{
+        width: 100%;
+    }
+    .cardIce .card-image {
+        width: 110px;
+       height: 110px;
+    }
+
+    .cardIce .card-content p.describe {
+        font-size: 10px;
+    }
+
+    .cardIce .card-content p.cardPrice {
+        text-align: center;
+        font-size: 20px ;
+    }
+
+}

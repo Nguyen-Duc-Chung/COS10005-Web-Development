@@ -1,0 +1,34 @@
+/* mobile.css */
+form {
+    font-size: 200%; /* Increase font size */
+  }
+  
+  h1 {
+    text-align: center; /* Center the text */
+  }
+  
+  h2 {
+    font-size: 40px; /* Set font size of <h2> */
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+  
+  input {
+    width: 100%; /* Full width for input elements */
+  }
+  
+  p {
+    margin: 0; /* Remove all margins for <p> elements */
+  }
+  
+  input[type="radio"] {
+    width: 15%; /* Set radio button width */
+  }
+  
+  .button {
+    width: 40%; /* Set width of buttons */
+  }
+  
+  div {
+    text-align: center; /* Center the submit button */
+  }
+  

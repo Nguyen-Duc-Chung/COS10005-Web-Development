@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <!-- Link to external JavaScript file -->
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post">
+        <!-- Username -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="Username" class="required"><br><br>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="Password" class="required"><br><br>
+
+        <!-- Gender (Radio Buttons) -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" class="required"><br><br>
+
+        <!-- Favorite Ice-cream (Select List) -->
+        <label for="icecream">Favourite Ice-cream:</label>
+        <select id="icecream" name="icecream" class="required">
+            <option value="">--Select Ice Cream--</option>
+            <option value="vanilla">Vanilla</option>
+            <option value="chocolate">Chocolate</option>
+            <option value="strawberry">Strawberry</option>
+            <option value="mint">Mint</option>
+        </select><br><br>
+
+        <!-- Hobbies (Checkboxes) -->
+        <label>Hobbies:</label><br>
+        <input type="checkbox" id="reading" name="hobbies" value="reading" class="required">
+        <label for="reading">Reading</label><br>
+        <input type="checkbox" id="sports" name="hobbies" value="sports" class="required">
+        <label for="sports">Sports</label><br>
+        <input type="checkbox" id="traveling" name="hobbies" value="traveling" class="required">
+        <label for="traveling">Traveling</label><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit" value="Register"></button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #FEFCFF;
+    --main-color: orangered;
+    --big-font: 7rem;
+    --p-font: 1.1rem;
+}
+
+body {
+   
+    /*Basic stuff*/
+    min-height: 100vh;
+    margin: 0;
+
+    /*Backrgound Parts*/
+    background-image: linear-gradient(to right, #2d383e 50%, #27252a 50%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    color: var(--main-color) ;
+    overflow-x: hidden;
+}
+
+
+
+nav{
+    background-color: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    height: 50px;
+    margin-bottom: 20px;
+    
+}
+nav ul{
+    width: 100% ;
+    list-style: none ;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    font-weight: 600;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    transition: all ease .50s;
+}
+
+nav a:hover{
+    font-size: 15px;
+    color: orangered;
+}
+
+.sidebar{
+    display: none;
+ 
+}
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(20px);
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap; /* Allows items to wrap to the next line */
+        justify-content: center; /* Centers items horizontally */
+    }
+
+    .sidebar a {
+        width: 100%;
+        text-align: center; /* Centers text within each link */
+    }
+
+    .mainbar {
+        display: none;
+    }
+}
+
+section{
+    padding: 0 15%;
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.home-img{
+    border-radius: 20px;
+    width: 990px;
+    height: 730px;
+    animation: rotate3dWithShadow 2s infinite alternate;
+    box-shadow: 10px 10px 20px rgba(211, 132, 132, 0.5);
+    transform-style: preserve-3d;
+}
+
+@keyframes rotate3dWithShadow {
+    0% {
+      transform: rotate3d(1, 1, 0, 0deg);
+    }
+    100% {
+      transform: rotate3d(1, 1, 0, 45deg);
+    }
+  }
+
+.home-img img{
+    object-position: 1px ; /* Use this to  position the image 1px from the left and px from the top inside the home-image (x,y coordinates) */
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-text span{
+    padding: 5px 25px;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.home-text h1{
+    font-size: var(--big-font);
+    margin: 23px 0;
+}
+
+ @media (max-width: 1850px){
+    section{
+        padding: 0 8%;
+        transition: .2s;
+        
+    }
+ }
+
+ @media (max-width: 1370px){
+    section{
+        padding: 0 4%;
+        transition: .2s;
+        
+    }
+ }
+
+ @media (max-width: 950px){
+    section{
+        padding: 70px 4%;
+    }
+    .home{
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .home-text span{
+        font-size: 15px;
+    }
+
+    .home-text h1 {
+        font-size: 30px;
+    }
+
+    .home-img{
+        margin: auto;
+        height: auto;
+        width: auto;
+    }
+ }
+
+/**********************FOOTER PARTS *************************/
+footer {
+    background-color: rgba(231, 210, 210);
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    bottom: 0;
+}

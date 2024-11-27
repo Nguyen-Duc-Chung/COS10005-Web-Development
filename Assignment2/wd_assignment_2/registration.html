@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sweet Life - Indulge in our artisanal ice creams and desserts made with the finest ingredients. Visit us in Milan or order online to experience our signature flavors.">
+    <meta name="keywords" content="Sweet Life, ice cream, artisanal desserts, Milan, signature flavors, order online">
+    <meta name="author" content="Nguyen Duc Chung">
+    <title>Registration </title>
+    
+    <!-- For register icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- For sign cart and footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/nav_footer.css">
+    <link rel="stylesheet" href="../css/registration.css">
+    <!--  Take style for skip link in features.css   -->
+    <link rel="stylesheet" href="../../css/features.css">
+    
+</head>
+<body>
+    
+    <header> <!-- Header section with navigation bar -->
+        <div class="navbar">
+            <div class="logo">
+                <h1>Sweet Life</h1>
+            </div>
+            <ul class="links">  <!-- Navigation links -->
+                <li><a class="nav-opt" href="index.html">Home</a></li>
+                <li><a class="nav-opt" href="order.html">Order</a></li>
+                <li><a class="nav-opt" href="registration.html">Sign Up</a></li>
+                <li><a class="nav-opt" href="features.html">Features</a></li>
+            </ul>
+            <div class="toggle_btn">  <!-- Toggle button for mobile navigation -->
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        
+        <div class="dropdown_menu "> <!-- Dropdown menu for mobile view -->
+            <ul class="dropdown_ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="registration.html">Sign Up</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="background"></div> <!--  BACKGROUND  -->
+    <a href="index.html" class="skip-link">Back to Main page</a>
+    
+    <main>
+        <!-- ************************************************************ LOGIN FORM  ************************************************************ -->
+        <div class="container">
+            <div class="form-box login">
+                <form >
+                    <h1>Login</h1>
+                    <div class="input-box">
+                        <label for="username">Username:</label>     <!-- Username -->
+                        <input type="text" id="username" name="Username" required>
+                        
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Password:</label>         <!-- Password -->
+                        <input type="password" id="password" name="Password"  required>
+                        
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <p>or login with social platforms</p>
+                    <!-- Social media login icons -->
+                    <div class="social-icons">
+                        <a href="#"><i class='bx bxl-google'><span>.</span></i></a>
+                        <a href="#"><i class='bx bxl-facebook'><span>.</span></i></a>
+                        <a href="#"><i class='bx bxl-github'><span>.</span></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'><span>.</span></i></a>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- ************************************************************ REGISTER FORM  ************************************************************ -->
+            <div class="form-box register">
+                <form id="registrationForm" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post">
+                    <h1>Registration</h1>
+                    <div class="input-box">
+                        <label for="reg-username">Username:</label>     <!-- Username -->
+                        <input type="text" id="reg-username" name="Username"  > 
+                    </div>
+                    <div class="input-box">
+                        <label for="reg-password">Password:</label>         <!-- Password -->
+                        <input type="password" id="reg-password" name="Password" >
+                        
+                    </div>
+                    <div class="input-box">
+                        <label for="email">Email:</label>             <!-- Email -->
+                        <input type="email" id="email" name="Email"  >
+                        
+                    </div>
+                    <div class="gender-box">                             <!-- Gender (Radio Buttons) -->
+                        
+                        <fieldset class="gender-option">
+                            <legend><h2>Gender</h2></legend>
+                            <div class="gender">
+                                <input type="radio" id="male" name="Gender" value="male">
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="gender">
+                                <input type="radio" id="female" name="Gender" value="female">
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="gender">
+                                <input type="radio" id="other" name="Gender" value="other">
+                                <label for="other">Other</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="icecream">Favourite Ice-cream:</label>         <!-- Favorite Ice-cream (Select List) -->
+                        <select id="icecream" name="icecream" >
+                            <option value="">Select Ice Cream</option>
+                            <option value="vanilla">Vanilla</option>
+                            <option value="chocolate">Chocolate</option>
+                            <option value="strawberry">Strawberry</option>
+                            <option value="mint">Mint</option>
+                        </select>  
+                    </div>
+                    
+                    <fieldset class="input-checkbox">   <!-- Hobbies (Checkboxes) -->  
+                        <legend><h3>Hobbies:</h3></legend>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="reading" name="hobbies" value="reading">
+                            <label for="reading">Reading</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="sports" name="hobbies" value="sports">
+                            <label for="sports">Sports</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="traveling" name="hobbies" value="traveling" >
+                            <label for="traveling">Traveling</label>
+                        </div>
+                    </fieldset>
+                    
+                    <button type="submit" class="btn">Register</button>
+                    <p>or register with social platforms</p>
+                    <!-- Social media registration icons -->
+                    <div class="social-icons">
+                        <a href="#"><i class='bx bxl-google'><span>.</span></i></a>
+                        <a href="#"><i class='bx bxl-facebook'><span>.</span></i></a>
+                        <a href="#"><i class='bx bxl-github'><span>.</span></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'><span>.</span></i></a>
+                    </div> 
+                </form>
+            </div>
+            
+            <!-- ************************************************************ Toggle Button  ************************************************************ -->
+            <div class="toggle-box">
+                <div class="toggle-panel toggle-left">
+                    <h1>Hi, Welcome!</h1>
+                    <p>Don't have an account?</p>
+                    <button class="btn register-btn">Register</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Welcome Back!</h1>
+                    <p>Already have an account?</p>
+                    <button class="btn login-btn">Login</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    
+    <!-- Footer with social icons and navigation -->
+    <footer class="footerContainer" id="page1">
+        <div class="socialIcons">
+            <a  href=""><i class="fa-brands fa-facebook"><span>facebook</span></i></a>
+            <a href=""><i class="fa-brands fa-instagram"><span>insta</span></i></a>
+            <a href=""><i class="fa-brands fa-youtube"><span>youtube</span></i></a>     
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">About</a></li>       
+            </ul>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2023; Designed by <span class="designer">Nguyen Duc Chung</span></p>
+        </div>
+    </footer>
+    
+    
+    <script src="../js/navbar.js"></script> 
+    <script src="../js/registration.js"></script> 
+</body>
+</html>

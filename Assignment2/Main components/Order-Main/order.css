@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-image: url("../../images/background/creambg.jpg");
+    background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed;
+}
+.background{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; min-height: 100vh;
+    background: rgba(0, 0, 0, 0.1) ;
+    backdrop-filter: blur(15px);
+    z-index: -1;
+}
+
+.OrderSection{
+    margin: 6rem ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+}
+
+/*************************************** ORDER *************************************************/
+.Order-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+/*************** Shipping Method ***************/
+.ship-mtd {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* background-color: rgba(236,236,236,0.8); */
+    background-color: rgba(80,46,45,0.8);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.ship-mtd h2{
+    color: #ead8c4;
+    font-family: 'Bangers', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+ 
+}
+
+.ship-mtd .ship-opt{
+    display: inline-block;
+    position: relative;
+}
+.ship-mtd .ship-opt button {
+    font-weight: bold;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    position: relative;
+    padding: 12px 23px;
+    margin: 0 -3px 0 -2px;
+    z-index: 2;
+    transition: transform 140ms linear;
+} 
+.ship-opt::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    bottom: -10px;
+    left: 0;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+.ship-opt button:hover{
+    transform: translateY(4px);
+}
+.ship-opt button:hover::before{ bottom: -6px;}
+.ship-opt button:first-child{ border-radius: 8px 0 0 8px; }
+.ship-opt button:last-child{ border-radius: 0 8px 8px 0; }
+.ship-opt button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1px;
+    right: 1px;
+    bottom: -10px;
+    z-index: 0;
+    pointer-events: none;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px #000;
+    transition: bottom 140ms linear;
+}
+.ship-opt button:first-child::before {border-radius: 8px 0 0 8px;}
+.ship-opt button:last-child::before {border-radius: 0 8px 8px 0;}
+.ship-opt button:active { transform: translateY(12px);}
+.ship-opt button:active::before {bottom: -2px;}
+
+
+/*************** Delivery Input ***************/
+.deli-box input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    margin-bottom:1.5rem ;
+}
+
+
+/*************** Payment Method ***************/
+
+button.comeback {
+    background: #e5594c;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 5px;
+    margin-bottom:10px;
+    color: #fff;
+    transition-duration: 0.3s;
+}
+button.comeback:hover, button.comeback:focus, button.comeback:active{
+    transform: scale(1.1);
+}
+
+.payment-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 85%;
+
+}
+.payment-type input[type="radio"]{
+    display: none;
+}
+.payment-type label {
+    position: relative;
+    color: #e5594c;
+    font-size: 27px;
+    border: 2px solid #e5594c;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 17rem; /* Set a fixed width here */
+   display: flex;
+   justify-content: space-between;
+   cursor: pointer;
+}
+label.pay-opt::before {
+    content: "";
+    height: 30px;
+    width: 30px;
+    border: 3px solid #e5594c;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+input[type="radio"]:checked + label{
+    background-color: #e5594c;
+    color: #fff;
+}
+input[type="radio"]:checked + label:before{
+    height: 15px;
+    width: 15px;
+    border: 10px solid white;
+    background-color: #e5594c;
+}
+
+
+/* ////////////////// FORM //////////////////  */
+
+.Order-container form {
+    width: 700px;
+    /* background-color: rgba(236,236,236,0.8); */
+    background-color: rgba(80,46,45,0.8);
+    padding: 40px;
+    border-radius: 10px;
+    color: #ead8c4;
+}
+
+form .row {
+    display: flex;
+    gap: 15px;
+}
+
+.row .column{
+    flex: 1 1 250px;
+}
+
+.column .title {
+    font-size: 20px;
+    color: #ead8c4;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.column .input-box {
+    margin: 15px 0;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.cardImage {
+    width: 60%;
+}
+
+.cardImage img {
+    width: 100%;
+}
+
+form .btn {
+    width: 100%;
+    padding: 5px;
+    background: #e5594c ;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 20px;
+    font-weight: 500;
+    transition-duration: 0.3s;
+}
+form .btn:hover{
+    transform: scale(0.8);
+
+}
+
+/*************** Pickup or pay Online ***************/
+.Order .card-accept,
+.Order .card-name,
+.Order .card-num,
+.Order .card-exp,
+.Order .comeback,
+.Order .credit-type {
+    display: none;
+}
+/*****************************************************/
+
+
+@media (max-width: 768px) {
+    .OrderSection {
+        margin: 0.5px;
+        width: 100%;
+    }
+
+    /* Adjust main container */
+    .Order-container {
+        width: 100%;
+    }
+
+    .ship-mtd{
+        padding: 1rem;
+    }
+
+    .ship-opt::after {
+        width: 94%; /* Ensures it spans the width of the smaller buttons */
+        left: 0; /* Center aligns the pseudo-element within the narrower viewport */
+    }
+
+    /* Stack columns vertically */
+    .row {
+        flex-direction: column;
+    }
+
+    .row .column {
+        flex: 1;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Adjust form size */
+    .Order-container form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* Adjust input box and button sizes */
+    .input-box input, 
+    .input-box select, 
+    button.comeback,
+    form .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Adjust payment option buttons */
+    .ship-opt button {
+        padding: 10px;
+        width: 48%;
+        font-size: 14px;
+    }
+
+    /* Payment type labels */
+    .payment-type label {
+        font-size: 18px;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    /* Fine-tune button and label sizes for touch */
+    label.pay-opt::before {
+        height: 24px;
+        width: 24px;
+        margin-right: 10px;
+    }
+}
+
+

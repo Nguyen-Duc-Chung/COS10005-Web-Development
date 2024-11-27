@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oblique Background Section</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #2c2e34 40%, #333740 40%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background-oblique {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150%;
+            height: 100%;
+            background-color: #333740;
+            transform: skewX(-15deg);
+            transform-origin: top left;
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .content p {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-oblique"></div>
+    <div class="content">
+        <h1>LUMIER DARK</h1>
+        <p>Light Style - Minimalist</p>
+    </div>
+</body>
+</html>
